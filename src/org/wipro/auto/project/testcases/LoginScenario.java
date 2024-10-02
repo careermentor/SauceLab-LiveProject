@@ -8,14 +8,14 @@ import org.wipro.auto.project.pages.LoginPage;
 public class LoginScenario extends BrowserInitiatie
 {
 
-	@Test(dataProvider="ddf",dataProviderClass=TestDataGenerator.class)
-	public void loginFunctionaility(String username, String password) throws Exception
+	@Test
+	public void loginFunctionaility() throws Exception
 	{
 		LoginPage login = new LoginPage(driver);
 		
 				
-		login.enter_username(username);
-		login.enter_password(password);
+		login.enter_username("standard_user");
+		login.enter_password("secret_sauce");
 		
 		login.click_loginbttn();
 	}

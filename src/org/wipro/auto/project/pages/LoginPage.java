@@ -15,16 +15,16 @@ public class LoginPage {
 
 	public void enter_username(String uname) throws Exception
 	{
-		driver.findElement(By.id(ReadPropFile.readelementprop("fb_login_username_id"))).sendKeys(uname);
+		driver.findElement(By.id(ReadPropFile.readelementprop("login_username_id"))).sendKeys(uname);
 	}
 	
 	public void enter_password(String pass) throws Exception
 	{
-		driver.findElement(By.name(ReadPropFile.readelementprop("fb_login_password_name"))).sendKeys(pass);
+		driver.findElement(By.id(ReadPropFile.readelementprop("login_password_id"))).sendKeys(pass);
 	}
 	
 	public void click_loginbttn() throws Exception
 	{
-		driver.findElement(By.cssSelector(ReadPropFile.readelementprop("fb_login_loginbttn_css"))).click();
+		driver.findElement(By.id(ReadPropFile.readelementprop("login_loginbttn_id"))).click();
 	}
 }
